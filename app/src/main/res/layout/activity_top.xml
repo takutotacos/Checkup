@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.takutosugita.checkup.model.User"/>
+
+        <variable
+            name="vm_top"
+            type="com.example.takutosugita.checkup.vm.TopViewModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp"
+        tools:context="com.example.takutosugita.checkup.ui.TopActivity">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="Welcome to Checkup!"
+            android:textSize="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/btn_to_check"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="toCheck"
+                android:text="Check"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/btn_to_list"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btn_to_check"
+                android:layout_marginLeft="16dp"
+                android:onClick="toList"
+                android:text="List"
+                android:textSize="16dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="@{user.name}"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+</layout>

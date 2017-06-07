@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    tools:context="com.example.takutosugita.checkup.ui.CheckActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's check your mood today!"
+        android:textSize="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="Today's weather"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/ed_weather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_physical_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_weather">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="Today's physical condition"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/ed_physical_condition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_today_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_physical_condition">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="Today's total point"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/ed_today_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_one_line_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_today_point">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="Some comment"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/ed_one_line_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"/>
+</RelativeLayout>
